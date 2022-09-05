@@ -1,5 +1,5 @@
 #!/bin/bash
 
-gcc *.o -fPIC -shared -o liball.so
+gcc -c -Wall -Werror -fPIC *.c
 
-LD_PRELOAD=$WPD/liball.so
+gcc -shared -o liball.so *.o
